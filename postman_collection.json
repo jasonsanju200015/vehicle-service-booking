@@ -1,0 +1,27 @@
+{
+  "info": {
+    "name": "Vehicle Service Booking API",
+    "version": "1.0.0",
+    "_postman_id": "vsb-collection"
+  },
+  "item": [
+    {
+      "name": "Admin Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}" },
+        "url": { "raw": "http://localhost:5000/api/auth/login", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api","auth","login"] }
+      }
+    },
+    {
+      "name": "Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"customerName\": \"Test\",\n  \"phone\": \"9999999999\",\n  \"vehicleNumber\": \"ABC123\",\n  \"serviceType\": \"Oil Change\",\n  \"date\": \"2026-02-20\",\n  \"time\": \"10:00\"\n}" },
+        "url": { "raw": "http://localhost:5000/api/bookings", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api","bookings"] }
+      }
+    }
+  ]
+}
